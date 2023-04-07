@@ -1,0 +1,17 @@
+-- Hata Üretme 
+DROP PROCEDURE IF EXISTS one_err;
+DELIMITER $$
+CREATE PROCEDURE one_err
+(
+prmOrderNum INT
+)
+BEGIN
+IF prmOrderNum IS NULL THEN
+SIGNAL SQLSTATE '22003' SET MESSAGE_TEXT = 'Geçersiz Tutar';
+END IF;
+SELECT 'SQL ÇALIŞTI';
+END $$
+DELIMITER ;
+
+
+CALL one_err(NULL);

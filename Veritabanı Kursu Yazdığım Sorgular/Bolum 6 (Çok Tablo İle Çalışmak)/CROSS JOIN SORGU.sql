@@ -1,0 +1,1 @@
+select *  from product CROSS JOIN category ;

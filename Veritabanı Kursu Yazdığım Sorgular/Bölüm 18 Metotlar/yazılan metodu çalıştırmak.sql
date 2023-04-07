@@ -1,0 +1,1 @@
+SELECT MULTIPLY(10);-- yazmış olduğumuz multıply fonksiyonunu çalıştırdık
